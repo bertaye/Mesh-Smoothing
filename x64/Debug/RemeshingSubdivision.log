@@ -1,0 +1,20 @@
+﻿  Mesh.cpp
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(25,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(25,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(26,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(26,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(27,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(27,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(6,15): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(9,2): error C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(14,2): error C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(17,3): error C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(21,9): error C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(23,3): error C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(89,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(124,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Mesh.cpp(135,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Painter.cpp
+C:\Digital Geometry Processing\Assignment2\RemeshingSubdivision\RemeshingSubdivision\Painter.h(1,10): fatal error C1083: Cannot open include file: 'Inventor/nodes/SoMaterial.h': No such file or directory
+  RemeshingSubdivision.cpp
+  Generating Code...
