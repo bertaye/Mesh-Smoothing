@@ -37,6 +37,7 @@
 #### Then use mesh->Sqrt3SubDiv for Sqrt3 Subdivision algorithm. Each call corresponds one iteration.
 #### Here are some example results:
 ### Coffee Cup
+
 <p float="center">
   <img src= "https://user-images.githubusercontent.com/39909689/166227447-c9ec774d-dd88-45be-9768-0051e5e29f2b.png" width="150" />
   <img src= "https://user-images.githubusercontent.com/39909689/166227441-6b5363c5-e6aa-4b6d-9c28-7cc8becae36a.png" width="150" />
@@ -44,7 +45,9 @@
   <img src="https://user-images.githubusercontent.com/39909689/166227440-44f19406-2dfe-4989-ad48-37b5425703d9.png" width="150" /> 
   <img src="https://user-images.githubusercontent.com/39909689/166227435-6983ff14-90af-4f65-a275-b37edd6c0100.png"width="150" />
 </p>
+
 ### Horse
+
 <p float="center">
   <img src= "https://user-images.githubusercontent.com/39909689/166227885-246ec1e7-10f6-491b-b66e-604fa2d0c976.png" width="150" />
   <img src= "https://user-images.githubusercontent.com/39909689/166227893-6def6682-4bfb-4c24-8548-7bb1569fbe27.png" width="150" />
