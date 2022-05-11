@@ -1,5 +1,5 @@
 # CatmullClark-Sqrt3-Subdivision
-
+#### You can find the converted & smoothed meshes in "result.off" file.
 ## Catmull Clark Algorithm
 #### To use it, load mesh with correct method ( use mesh->loadOffTriMesh("mesh.off") for triangulated meshes and use mesh->loadOffQuadMesh("mesh.off") for quad meshes)
 #### If you loaded a triangulated mesh, call the mesh->convertQuadbySplit() method to continue.
