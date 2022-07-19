@@ -3,10 +3,14 @@
 
 void Mesh::loadOffTriMesh(const char* name)
 {
-	FILE* fPtr = fopen(name, "r");
+	FILE* fPtr;
+	fopen_s(&fPtr, name, "r");
+	if (fPtr == 0)
+		return;
+
 	char str[334];
 
-	fscanf(fPtr, "%s", str);
+	fscanf_s(fPtr, "%s", str,334);
 
 	int nVerts, nTris, n, i = 0;
 	float x, y, z;
@@ -32,10 +36,11 @@ void Mesh::loadOffTriMesh(const char* name)
 }
 
 void Mesh::loadOffQuadMesh(const char* name) {
-	FILE* fPtr = fopen(name, "r");
+	FILE* fPtr;
+	fopen_s(&fPtr,name, "r");
 	char str[334];
 
-	fscanf(fPtr, "%s", str);
+	fscanf_s(fPtr, "%s", str,334);
 
 	int nVerts, nQuads, n, i = 0;
 	float x, y, z, w;
