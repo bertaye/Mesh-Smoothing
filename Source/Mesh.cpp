@@ -1,38 +1,58 @@
 #include "Mesh.h"
-
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
 
 void Mesh::loadOffTriMesh(const char* name)
 {
-	FILE* fPtr;
-	fopen_s(&fPtr, name, "r");
-	if (fPtr == 0)
+	std::ifstream file(name);
+	if (!file.is_open()) {
+		std::cerr << "Failed to open file.\n";
 		return;
+	}
 
-	char str[334];
+	std::string line;
+	// Read and ignore the first line containing "OFF"
+	std::getline(file, line);
 
-	fscanf_s(fPtr, "%s", str,334);
+	// Read the second line for vertex, triangle counts
+	std::getline(file, line);
+	std::istringstream iss(line);
+	int nVerts, nTris, dummy;
+	if (!(iss >> nVerts >> nTris >> dummy)) { // The last integer is not used
+		std::cerr << "Failed to read header.\n";
+		return;
+	}
 
-	int nVerts, nTris, n, i = 0;
 	float x, y, z;
-
-	fscanf_s(fPtr, "%d %d %d\n", &nVerts, &nTris, &n);
-	while (i++ < nVerts)
-	{
-		fscanf_s(fPtr, "%f %f %f", &x, &y, &z);
+	for (int i = 0; i < nVerts; ++i) {
+		if (!getline(file, line)) {
+			std::cerr << "Failed to read vertex data.\n";
+			return;
+		}
+		std::istringstream vertStream(line);
+		if (!(vertStream >> x >> y >> z)) {
+			std::cerr << "Failed to parse vertex coordinates.\n";
+			return;
+		}
 		addVertex(x, y, z);
 	}
 
-	while (fscanf_s(fPtr, "%d", &i) != EOF)
-	{
-		fscanf_s(fPtr, "%f %f %f", &x, &y, &z);
-		addTriangle((int) x, (int) y, (int) z);
-		setTriNormal(tris.size()-1);
-		makeVertsNeighbor(x, y);
-		makeVertsNeighbor(y, z);
-		makeVertsNeighbor(x, z);
+	int discard, v1, v2, v3;
+	while (getline(file, line)) {
+		std::istringstream triStream(line);
+		if (!(triStream >> discard >> v1 >> v2 >> v3)) {
+			std::cerr << "Failed to parse triangle indices.\n";
+			return;
+		}
+		addTriangle(v1, v2, v3);
+		setTriNormal(tris.size() - 1);
+		makeVertsNeighbor(v1, v2);
+		makeVertsNeighbor(v2, v3);
+		makeVertsNeighbor(v1, v3);
 	}
-
-	fclose(fPtr);
 }
 
 void Mesh::loadOffQuadMesh(const char* name) {
