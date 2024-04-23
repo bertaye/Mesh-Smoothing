@@ -1,7 +1,16 @@
 # CatmullClark-Sqrt3-Subdivision
+## Update:
+#### I converted this project to a command line application, you can build it with CMake:
 
-#### You can find the converted & smoothed meshes in "result.off" file.
-#### Also you can use this project for converting triangulated meshes to quadrated mesh by calling mesh->convertQuadbySplit() method after loading the quad mesh.
+```
+mkdir build
+cd build
+cmake ../
+cmake --build .
+```
+#### and then go to MeshSubdivider.exe, run MeshSubdivider.exe --help to see options.
+## Note:
+#### This project runs on CPU, I am open to appending it with CUDA Kernels and would approve any PR who does that or partially help to it (I love writing CUDA Kernels but I do not have time to do it by myself)
 
 ## Catmull Clark Algorithm
 #### To use it, load mesh with correct method ( use mesh->loadOffTriMesh("mesh.off") for triangulated meshes and use mesh->loadOffQuadMesh("mesh.off") for quad meshes)
