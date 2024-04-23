@@ -1,3 +1,0 @@
-			BASE MESH 			 DIVIDED MESH
-Face Count: 		 0 				 576
-Total Surface Area:	0			112.283333
